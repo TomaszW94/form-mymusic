@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz MyMusic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Dodawanie nowego kontrahenta</h2>
+        <form id="form" class="form">
+                <div class="form__col">
+                    <div class="form__photo">
+                        <label for="image-upload" class="btn form__add-photo">
+                            Dodaj zdjęcie
+                        </label>
+                        <input type="file" id="image-upload" accept="image/jpg, image/jpeg" value="Dodaj zdjęcie">
+                    </div>
+                </div>
+                <div class="form__col">
+                    <div class="form__group">
+                        <!-- Name  -->
+                        <label for="name" class="form__label">Imię</label>
+                        <input id="name" type="text" class="form__input" placeholder="Imię">
+                        <small class="error"></small>
+                        <!-- Lastname  -->
+                        <label for="lastname" class="form__label">Nazwisko</label>
+                        <input id="lastname" type="text" class="form__input" placeholder="Nazwisko">
+                        <small class="error"></small>
+                    </div>
+                    <!-- type  -->
+                    <legend class="form__legend">Typ konta: </legend>
+                    <div class="form__group">
+                        <div class="form__group-radio">
+                            <label for="person" class="form__label">Osoba</label>
+                            <input type="radio" id="person" name="type" value="person" class="form__radio" >
+                            <label for="company" class="form__label">Firma</label>
+                            <input type="radio" id="company" name="type" value="company" class="form__radio">
+                        </div>
+                        <label for="idnumber" class="form__label">Numer identyfikacyjny</label>
+                        <input id="idnumber" type="number" class="form__input" placeholder="PESEL / NIP" >
+                        <small class="error"></small>
+                    </div>
+                    <input type="submit" value="Dodaj kontrahenta" class="btn form__btn-submit">
+                    <small class="error form__error-submit"></small>
+                </div>
+            </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
